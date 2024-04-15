@@ -1,0 +1,39 @@
+@use "./reset";
+
+.loding {
+  position: fixed;
+  background-color: #7a7a7aaf;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.pagenation {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-weight: bold;
+  display: flex;
+  .pre {
+    cursor: pointer;
+  }
+  .next {
+    cursor: pointer;
+  }
+  ul {
+    gap: 5px;
+    display: flex;
+    li {
+      cursor: pointer;
+    }
+  }
+}
