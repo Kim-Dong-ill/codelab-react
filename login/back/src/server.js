@@ -6,6 +6,9 @@ const dotenv = require("dotenv");
 const userRouter = require("./routers/userRouter");
 dotenv.config();
 
+const cors = require("cors");
+app.use(cors());
+
 const server = async function () {
   try {
     await mongoose.connect(process.env.MONGO_URL);
@@ -16,8 +19,8 @@ const server = async function () {
   } catch (error) {
     console.log({ error: "에러" });
   }
+  app.listen(4000, function () {
+    console.log("4000port connected");
+  });
 };
 server();
-app.listen(4000, function () {
-  console.log("4000port connected");
-});

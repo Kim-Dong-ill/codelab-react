@@ -1,23 +1,14 @@
-import React, { useEffect, useState } from "react";
-import "./css/style.scss";
-import axios from "axios";
-import { Routes, Route } from "react-router-dom";
-
-import Header from "./layout/header";
-import Main from "./layout/Main";
-import Footer from "./layout/footer";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import MenuRouter from "./routes/MenuRouter";
 
 function App() {
   return (
-    <>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Main />} />
-        </Routes>
-      </div>
-      <Footer />
-    </>
+    <div>
+      <NavLink to="/menu">메뉴</NavLink>
+
+      <MenuRouter></MenuRouter>
+    </div>
   );
 }
 
